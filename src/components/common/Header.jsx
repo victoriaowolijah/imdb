@@ -32,9 +32,7 @@ const StyledToolBar = styled(Toolbar)`
 
 `;
 
-const handleClick = (e) => {
-    setOpen(e.currentTarget);
-}
+
 
 
 const InputSearchField = styled(InputBase)`  
@@ -53,6 +51,9 @@ const Logo = styled('img')({
 const Header = () => {
     const [open, setOpen] = useState(null);
 
+    const handleClick = (e) => {
+        setOpen(e.currentTarget);
+    }
    
     const handleClose = () => {
         setOpen(null);
