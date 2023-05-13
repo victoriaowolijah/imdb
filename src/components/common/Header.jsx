@@ -32,6 +32,11 @@ const StyledToolBar = styled(Toolbar)`
 
 `;
 
+const handleClick = (e) => {
+    setOpen(e.currentTarget);
+}
+
+
 const InputSearchField = styled(InputBase)`  
     background: #FFFFFF;
     height: 30px;
@@ -40,15 +45,17 @@ const InputSearchField = styled(InputBase)`
 `
 
 
+
 const Logo = styled('img')({
-    width: 64
+    width: 64,
 })
 
 const Header = () => {
     const [open, setOpen] = useState(null);
 
-    const handleclick = () => {
-        setOpen();
+   
+    const handleClose = () => {
+        setOpen(null);
     }
   return (
     
@@ -59,7 +66,7 @@ const Header = () => {
                 <Menu />
                 <Typography>Menu</Typography>
             </Box>
-            <HeaderMenu />
+            <HeaderMenu open = {open} handleClose={handleClose}/>
             <InputSearchField />
             <Typography>IMDb<Box component="span">Pro</Box></Typography>
             <Box>
