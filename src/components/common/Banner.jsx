@@ -29,7 +29,7 @@ const responsive = {
 
 const Banner = ({movies}) => {
   return (
-    <Box style={{width: '65%'}}>
+    <Box style={{width: '65%', paddingTop:'40px'}}>
         <Carousel
             responsive={responsive}
             swipeable={false}
