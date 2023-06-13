@@ -4,3 +4,9 @@ export const POPULAR_API_URL = 'https://api.themoviedb.org/3/movie/popular?api_k
 export const UPCOMING_API_URL = 'https://api.themoviedb.org/3/movie/upcoming?api_key=74a4e95735194bf1f37fbc264a74797b'
 export const TOPRATED_API_URL = 'https://api.themoviedb.org/3/movie/top_rated?api_key=74a4e95735194bf1f37fbc264a74797b'
 export const NOWPLAYING_API_URL = 'https://api.themoviedb.org/3/movie/now_playing?api_key=74a4e95735194bf1f37fbc264a74797b'
+
+export const movieType = {
+    upcoming: 'Upcoming',
+    toprated: 'Top Rated',
+    popular: 'Popular',
+}

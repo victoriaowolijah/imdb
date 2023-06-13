@@ -1,6 +1,6 @@
 import {useEffect, useState} from 'react';
 import Header from '../components/common/Header';
-import { CategoryMovies } from '../services/api';
+import { categoryMovies } from '../services/api';
 import { NOWPLAYING_API_URL } from '../constants/constant';
 import UpNext from '../components/UpNext';
 import Slide from '../components/Slide';
@@ -27,7 +27,7 @@ const Home = () => {
 
     useEffect(() => {
         const getData = async () => {
-            let response = await CategoryMovies(NOWPLAYING_API_URL);
+            let response = await categoryMovies(NOWPLAYING_API_URL);
             setMovies(response.results);
         }
         getData();    
