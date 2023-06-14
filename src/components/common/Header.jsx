@@ -4,6 +4,8 @@ import { AppBar, Toolbar, styled, Box, Typography, InputBase } from '@mui/materi
 import { logoURL } from '../../constants/constant';
 import Menu from '@mui/icons-material/Menu';
 import { BookmarkAdd, ExpandMore } from '@mui/icons-material';
+import { useNavigate } from 'react-router-dom';
+import { routhpath } from '../../constants/route'; 
 
 //components
 import HeaderMenu from './HeaderMenu';
@@ -51,6 +53,8 @@ const Logo = styled('img')({
 const Header = () => {
     const [open, setOpen] = useState(null);
 
+    const navigate = useNavigate();
+
     const handleClick = (e) => {
         setOpen(e.currentTarget);
     }
@@ -62,7 +66,7 @@ const Header = () => {
     
     <AppBar>
         <StyledToolBar>
-            <Logo src={logoURL} alt="logo" />
+            <Logo src={logoURL} alt="logo"  onClick={() => navigate(routhpath.home)}/>
             <Box onClick={handleClick}>
                 <Menu />
                 <Typography>Menu</Typography>
